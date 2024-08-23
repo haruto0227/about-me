@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせページ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 50px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-zone {
+            width: 60%; /* お問い合わせゾーンの幅 */
+            padding-right: 20px;
+        }
+
+        .contact-zone h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .contact-zone form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-zone label {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .contact-zone input,
+        .contact-zone textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .contact-zone button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .image-zone {
+            width: 35%; /* 画像ゾーンの幅 */
+            text-align: center;
+        }
+
+        .image-zone img {
+            width: 100%; /* 画像はゾーンの幅に合わせる */
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- お問い合わせゾーン -->
+        <div class="contact-zone">
+            <h2>お問い合わせ</h2>
+            <form id="contactForm">
+                <label for="name">名前</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">メールアドレス</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">メッセージ</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">送信</button>
+            </form>
+        </div>
+
+        <!-- 画像ゾーン -->
+        <div class="image-zone">
+            <img src="img/Image (2).jpg" alt="お問い合わせイメージ" id="contact-image">
+        </div>
+    </div>
+
+    <script>
+        // 画像のURLを動的に変更する場合
+        const contactImage = document.getElementById('contact-image');
+        const imageUrl = "img/Image (2).jpg"; // ここに画像のURLを指定
+        contactImage.src = imageUrl;
+
+        // フォーム送信のサンプル（JavaScriptでフォームの動作を管理可能）
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // フォームのデフォルト送信を停止
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // 送信内容をコンソールに表示（実際はここでサーバーに送信するコードを追加）
+            console.log('名前:', name);
+            console.log('メールアドレス:', email);
+            console.log('メッセージ:', message);
+            
+            alert('お問い合わせ内容を送信しました！');
+        });
+    </script>
+</body>
+</html>
+
+<!-- フッター -->
+<?php include 'footer.php'; ?>
+<nav>
+    <ul>
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="about.html">自己紹介</a></li>
+    <li><a href="dogs.html">愛犬紹介</a></li>
+    <li><a href="goods.html">おすすめグッズ</a></li>
+    <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+    </nav>
+</body>
+</html>
