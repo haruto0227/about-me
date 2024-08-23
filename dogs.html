@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>犬種紹介</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<!-- ヘッダー -->
+<?php include 'header.php'; ?>
+<!-- メインコンテンツ -->
+<main>
+<h1>犬種紹介</h1>
+<p>家の世界一かわいい愛犬を紹介します。</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>犬の自己紹介</title>
+    <li>ミニチュアダックスフンド</li>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+        }
+        .profile {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 300px;
+        }
+        .profile h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .profile p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <h1 id="dog-name">犬の名前</h1>
+        <p id="favorite-food">好きな食べ物: </p>
+        <p id="hobby">趣味: </p>
+    </div>
+
+    <script>
+        // 犬の情報
+        const dog = {
+            name: "ライト",
+            favoriteFood: "犬が食べれるもの全部",
+            hobby: "寝ること"
+        };
+
+        // 情報をHTMLに反映
+        document.getElementById('dog-name').innerText = dog.name;
+        document.getElementById('favorite-food').innerText = "好きな食べ物: " + dog.favoriteFood;
+        document.getElementById('hobby').innerText = "趣味: " + dog.hobby;
+    </script>
+</body>
+</html>
+</main>
+<ul>
+</ul>
+</main>
+<img src="img/Image (1).jpg" alt="犬の画像" width="500" height="auto">
+<!-- フッター -->
+<?php include 'footer.php'; ?>
+<nav>
+    <ul>
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="about.html">自己紹介</a></li>
+    <li><a href="dogs.html">愛犬紹介</a></li>
+    <li><a href="goods.html">おすすめグッズ</a></li>
+    <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+    </nav>
+</body>
+</html>
