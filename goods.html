@@ -1,26 +1,91 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>おすすめグッズ</title>
-<link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>犬向けおすすめ商品紹介</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .product h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .product p {
+            font-size: 1.1em;
+            color: #555;
+        }
+        .product a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-<!-- ヘッダー -->
-<?php include 'header.php'; ?>
-<!-- メインコンテンツ -->
-<main>
-<h1>おすすめグッズ</h1>
-<p>ここでは犬におすすめのグッズを紹介します。</p>
-<ul>
-<li>ハーネス</li>
-<li>丈夫なおもちゃ</li>
-<li>快適なベッド</li>
-</ul>
-</main>
-<!-- フッター -->
-<?php include 'footer.php'; ?>
+
+    <h1>犬向けおすすめ商品</h1>
+
+    <div id="product-container"></div>
+
+    <script>
+        
+        const products = [
+            {
+                name: "犬用おもちゃ",
+                image: "https://github.com/haruto0227/about-me/blob/main/5004665547590-2.jpg?raw=true",
+                description: "耐久性があり、楽しく遊べる犬用おもちゃ。",
+                url: "https://item.rakuten.co.jp/jsame/911674024-1005004665547590-2/?iasid=wem_icbs_&ifd=57&icm_cid=568136739&icm_agid=1176479191398436&icm_acid=138339043&msclkid=e963236843971791419945b9081172f9&scid=af_pc_etc&sc2id=af_102_0_10002811&iasid=wem_icbs_&icm_acid=138339043&ifd=57&icm_agid=1176479191398436&icm_cid=568136739"
+            },
+            {
+                name: "犬用フード",
+                image: "https://github.com/haruto0227/about-me/blob/main/4562358781872.jpg?raw=true",
+                description: "健康をサポートする栄養バランスの良い犬用フード。",
+                url: "https://item.rakuten.co.jp/mathy-mathy/pet-4562358781872-0/?scid=af_pc_etc&sc2id=af_113_0_10002874&iasid=wem_icbs_&ifd=57&icm_acid=138339043&icm_cid=568136739&icm_agid=1176479191398436&msclkid=70eee0e070ff181ce3fb86313a89ce2a"
+            }
+        ];
+
+        
+        function displayProducts() {
+            const container = document.getElementById('product-container');
+
+            products.forEach(product => {
+                const productDiv = document.createElement('div');
+                productDiv.classList.add('product');
+
+                productDiv.innerHTML = `
+                    <h2>${product.name}</h2>
+                    <img src="${product.image}" alt="${product.name}">
+                    <p>${product.description}</p>
+                    <a href="${product.url}" target="_blank">商品ページを見る</a>
+                `;
+
+                container.appendChild(productDiv);
+            });
+        }
+
+        
+        window.onload = displayProducts;
+    </script>
 <nav>
     <ul>
     <li><a href="index.html">ホーム</a></li>
