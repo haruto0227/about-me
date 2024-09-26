@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己紹介ページ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="name">名前</h1>
+        <p id="age">年齢: </p>
+        <p id="bio">自己紹介: </p>
+        <p id="hobbies">趣味: </p>
+    </div>
+
+    <script>
+        const person = {
+            name: "湯浅春都",
+            age: 18,
+            bio: "愛犬を愛してやまないただの専門学生",
+            hobbies: ["ゲーム", "動画鑑賞", "愛犬をもみくちゃに撫でる"],
+        };
+        document.getElementById('name').innerText = person.name;
+        document.getElementById('age').innerText = "年齢: " + person.age;
+        document.getElementById('bio').innerText = "自己紹介: " + person.bio;
+        document.getElementById('hobbies').innerText = "趣味: " + person.hobbies.join(", ");
+    </script>
+</body>
+</html>
+<img src="https://github.com/haruto0227/about-me/blob/main/Image%20(3).jpg?raw=true" alt="犬の画像" width="500" height="auto">
+</main>
+<nav>
+    <ul>
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="about.html">自己紹介</a></li>
+    <li><a href="dogs.html">愛犬紹介</a></li>
+    <li><a href="goods.html">おすすめグッズ</a></li>
+    <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+    </nav>
+</body>
+</html>
